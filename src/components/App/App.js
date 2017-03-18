@@ -3,7 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
-import logo from './logo.svg';
+import logo from '../../logo.svg';
 import './App.css';
 
 class App extends Component {
