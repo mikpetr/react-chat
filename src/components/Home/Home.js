@@ -4,6 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 
 import RecentConversations from '../RecentConversations/RecentConversations';
+import Conversation from '../Conversation/Conversation';
 
 import './Home.css';
 
@@ -54,7 +55,7 @@ class Home extends Component {
             <RecentConversations conversations={this.state.conversations} />
           </Drawer>
           <div className="page-container">
-            This is a home page
+            <Conversation />
           </div>
         </div>
       </div>

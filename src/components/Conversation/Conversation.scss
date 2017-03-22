@@ -1,0 +1,37 @@
+.Conversation {
+  padding: 40px;
+
+  .message {
+    .avatar {
+      margin-right: 30px;
+    }
+
+    .text {
+      display: inline-flex;
+      max-width: calc(100% - 70px);
+      padding: 10px;
+      box-sizing: border-box;
+      vertical-align: top;
+      background-color: rgb(232, 232, 232);
+      position: relative;
+      margin-top: 10px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: -12px;
+        width: 0;
+        height: 0;
+        box-sizing: border-box;
+        border: 12px solid transparent;
+        border-top-color: rgb(232, 232, 232);
+      }
+    }
+
+    &:first-of-type {
+      margin-top: 20px;
+    }
+  }
+}
