@@ -1,0 +1,54 @@
+.Message {
+  display: flex;
+  padding: 4px 0;
+
+  .text {
+    max-width: calc(100% - 70px);
+    padding: 10px;
+    box-sizing: border-box;
+    vertical-align: top;
+    background-color: rgb(232, 232, 232);
+    position: relative;
+    margin-top: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      width: 0;
+      height: 0;
+      box-sizing: border-box;
+      border: 12px solid transparent;
+      border-top-color: rgb(232, 232, 232);
+    }
+  }
+
+  &:first-of-type {
+    margin-top: 20px;
+  }
+
+  &.left {
+    flex-direction: row;
+
+    .avatar {
+      margin-right: 30px;
+    }
+
+    .text::before {
+      left: -12px;
+    }
+  }
+
+  &.right {
+    flex-direction: row-reverse;
+
+    .avatar {
+      margin-left: 30px; 
+    }
+
+    .text::before {
+      right: -12px;
+    }
+  }
+}
