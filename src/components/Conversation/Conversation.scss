@@ -1,3 +1,19 @@
 .Conversation {
   padding: 10px 40px 0 40px;
+
+  .send-message-block {
+    position: fixed;
+    padding-left: 40px;
+    padding-right: 90px;
+    bottom: 0;
+    left: 360px;
+    right: 0;
+    background-color: white;
+    z-index: 1;
+
+    .send-button {
+      right: 28px;
+      top: 0;
+    }
+  }
 }

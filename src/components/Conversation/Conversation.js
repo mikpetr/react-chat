@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-
+import TextField from 'material-ui/TextField';
+import IconButton from 'material-ui/IconButton';
 import Message from '../Message/Message';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import ContentSend from 'material-ui/svg-icons/content/send';
 
 import './Conversation.css';
+
+const styles = getMuiTheme(getMuiTheme);
 
 class Conversation extends Component {
 
@@ -50,6 +55,15 @@ class Conversation extends Component {
       <div className="Conversation">
         <h3>{this.state.conversation.title}</h3>
         {this.getMessages(this.state.conversation.messages)}
+        <div className="send-message-block">
+          <TextField
+            hintText="Enter your message"
+            fullWidth={true}
+          />
+          <IconButton className="send-button" style={{ position: 'absolute' }}>
+            <ContentSend color={styles.palette.primary1Color} />
+          </IconButton>
+        </div>
       </div>
     );
   }
